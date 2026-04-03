@@ -1,0 +1,27 @@
+experiment:
+  name: tiny-shakespeare-run1
+
+dataset:
+  train_path: data/tiny_shakespeare/train.txt
+  valid_path: data/tiny_shakespeare/valid.txt
+  test_path: data/tiny_shakespeare/test.txt
+
+model:
+  vocab_size: 10000
+  d_model: 128
+  d_ff: 512
+  heads: 8
+  n_layers: 4
+  max_seq_len: 256
+
+training:
+  batch_size: 32
+  learning_rate: 0.0001
+  epochs: 10
+  seed: 42
+
+output:
+  run_dir: runs/tiny-shakespeare-run1
+  checkpoint_dir: runs/tiny-shakespeare-run1/checkpoints
+  model_path: runs/tiny-shakespeare-run1/model.json
+  log_dir: runs/tiny-shakespeare-run1/logs
